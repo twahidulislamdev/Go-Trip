@@ -37,7 +37,7 @@ const Header = () => {
             ))}
           </ul>
           <div className="flex items-center space-x-5">
-            <Button className="text-sm font-semibold text-primaryColor py-3 px-5 border-2 border-primaryColor rounded hover:bg-primaryColor hover:text-white transition duration-300">
+            <Button className="text-sm font-semibold text-primaryColor py-3 px-5 border-2 border-primaryColor rounded hover:bg-primaryColor hover:text-white transition duration-300 cursor-pointer">
               Register / Sign In
             </Button>
           </div>

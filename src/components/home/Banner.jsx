@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Container from "./Container";
+import Container from "../ui/Container";
 import {
   BsFillPinMapFill,
   BsBuilding,
@@ -735,12 +735,8 @@ function CarCard() {
             02
           </span>
           <div>
-            <p className="text-[13px] font-bold text-neutral-900">
-              March, Wed
-            </p>
-            <p className="text-[11.5px] text-neutral-400">
-              Pick-up Date
-            </p>
+            <p className="text-[13px] font-bold text-neutral-900">March, Wed</p>
+            <p className="text-[11.5px] text-neutral-400">Pick-up Date</p>
           </div>
         </div>
 
@@ -754,9 +750,7 @@ function CarCard() {
               <p className="text-[13px] font-bold text-neutral-900">
                 April, Fri
               </p>
-              <p className="text-[11.5px] text-neutral-400">
-                Drop-off Date
-              </p>
+              <p className="text-[11.5px] text-neutral-400">Drop-off Date</p>
             </div>
           </div>
         )}

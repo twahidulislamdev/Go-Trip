@@ -1,11 +1,26 @@
-import React from "react";
-import Container from "./Container";
-import Flex from "./Flex";
+"use client";
+import React, { useState, useEffect } from "react";
+import Container from "../ui/Container";
+import Flex from "../ui/Flex";
 import Image from "next/image";
-import BrandLogo from "../../public/brandLogo.png";
-import Button from "./Button";
+import BrandLogo from "../../../public/brandLogo.png";
+import Button from "../ui/Button";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const menuItems = [
     "Destination",
     "Hotel",
@@ -15,9 +30,17 @@ const Header = () => {
     "Pages",
   ];
   return (
-    <div className="w-full fixed top-0 right-0 z-50 ">
+    <div
+      className={`w-full fixed top-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+      }`}
+    >
       <Container>
-        <Flex className="justify-between items-center py-5">
+        <Flex
+          className={`justify-between items-center transition-all duration-300 ${
+            isScrolled ? "py-3" : "py-5"
+          }`}
+        >
           <div className="">
             <Image
               src={BrandLogo}

@@ -56,17 +56,17 @@ const destinations = [
 ];
 export default function MostVisitPlaceBd() {
   return (
-    <section className="py-10 bg-white px-3 lg:px-0">
+    <section className="py-5 bg-white px-3 lg:px-0">
       <Container>
         <div className="flex flex-col items-start mb-10">
           <div className="flex items-center gap-3 mb-3">
             <span className="w-1.5 h-6 rounded-full bg-primaryColor"></span>
             <span className="text-sm font-bold text-primaryColor uppercase tracking-[0.15em]">
-              Explore the World
+              Explore in Bangladesh
             </span>
           </div>
           <h2 className="text-4xl font-black text-[#0a1128] tracking-tight">
-            Top Destinations
+            Most Popular Destinations
           </h2>
         </div>
 

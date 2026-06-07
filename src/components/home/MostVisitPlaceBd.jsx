@@ -5,54 +5,56 @@ import Reykjavik from "../../../public/reykjavik.png";
 import Paris from "../../../public/paris.png";
 import Amsterdam from "../../../public/amsterdam.png";
 import Istanbul from "../../../public/istanbul.png";
-
 const destinations = [
   {
     id: 1,
-    name: "Los Angeles",
-    properties: "1,714",
-    image: LosAngeles,
+    name: "Chittagong",
+    properties: "1,200+",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/0/06/Karnafully_Bridge_CHittagong_%28cropped%29.jpg",
     colSpan: "col-span-1",
   },
   {
     id: 2,
-    name: "London",
-    properties: "1,714",
+    name: "Dhaka",
+    properties: "2,500+",
     image:
-      "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200&auto=format&fit=crop",
+      "https://images.trvl-media.com/place/973/c3ed463b-8307-4c24-9ce5-a543941c3bf9.jpg",
     colSpan: "col-span-2",
   },
   {
     id: 3,
-    name: "Reykjavik",
-    properties: "1,714",
-    image: Reykjavik,
+    name: "Sylhet",
+    properties: "850+",
+    image: "https://www.deraresort.com/images/blog-bichanakandi-sylhet.jpg",
     colSpan: "col-span-1",
   },
   {
     id: 4,
-    name: "Paris",
-    properties: "1,714",
-    image: Paris,
-    colSpan: "col-span-2",
+    name: "Sreemangal",
+    properties: "450+",
+    image:
+      "https://images.pexels.com/photos/35458090/pexels-photo-35458090.jpeg?cs=srgb&dl=pexels-tanhatamannasyed-35458090.jpg&fm=jpg",
+    colSpan: "col-span-1",
   },
   {
     id: 5,
-    name: "Amsterdam",
-    properties: "1,714",
-    image: Amsterdam,
-    colSpan: "col-span-1",
+    name: "Cox's Bazar",
+    properties: "1,800+",
+    image:
+      "https://www.shutterstock.com/image-photo/coxs-bazar-bangladesh-13-september-600nw-2535580461.jpg",
+    colSpan: "col-span-2",
   },
   {
     id: 6,
-    name: "Istanbul",
-    properties: "1,714",
-    image: Istanbul,
+    name: "Bandarban",
+    properties: "600+",
+    image:
+      "https://www.travelmate.com.bd/wp-content/uploads/2021/02/Tindu-Thanchi-Bandarban.jpg",
     colSpan: "col-span-1",
   },
 ];
-
-export default function TopDestinations() {
+export default function MostVisitPlaceBd() {
   return (
     <section className="py-10 bg-white px-3 lg:px-0">
       <Container>

@@ -380,10 +380,10 @@ function ActivityCard() {
             <circle cx="12" cy="10" r="3" />
           </svg>
           <div className="min-w-0">
-            <p className="text-[14px] font-bold text-neutral-900 truncate leading-tight">
-              City or region…
+            <p className="text-base font-bold text-neutral-900 truncate leading-tight">
+              City or Region…
             </p>
-            <p className="text-[11.5px] text-neutral-400 truncate leading-tight">
+            <p className="text-xs text-neutral-500 truncate leading-tight">
               Where to go?
             </p>
           </div>
@@ -395,10 +395,10 @@ function ActivityCard() {
             08
           </span>
           <div>
-            <p className="text-[13px] font-bold text-neutral-900 leading-tight">
+            <p className="text-base font-bold text-neutral-900 leading-tight">
               June, Monday
             </p>
-            <p className="text-[11.5px] text-neutral-400 leading-tight">
+            <p className="text-xs text-neutral-500 leading-tight">
               Start Date
             </p>
           </div>
@@ -410,10 +410,10 @@ function ActivityCard() {
             10
           </span>
           <div>
-            <p className="text-[13px] font-bold text-neutral-900 leading-tight">
+            <p className="text-base font-bold text-neutral-900 leading-tight">
               June, Wednesday
             </p>
-            <p className="text-[11.5px] text-neutral-400 leading-tight">
+            <p className="text-xs text-neutral-500 leading-tight">
               End Date
             </p>
           </div>
@@ -425,10 +425,10 @@ function ActivityCard() {
             01
           </span>
           <div>
-            <p className="text-[13px] font-bold text-neutral-900 leading-tight">
+            <p className="text-base font-bold text-neutral-900 leading-tight">
               1 person
             </p>
-            <p className="text-[11.5px] text-neutral-400 leading-tight">
+            <p className="text-xs text-neutral-500 leading-tight">
               People
             </p>
           </div>

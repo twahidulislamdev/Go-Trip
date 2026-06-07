@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "../ui/Container";
-import FeaturedHotelCard from "./FeaturedHotelCard";
+import FeaturedHotelCard from "../ui/HotelCard";
 
 const hotels = [
   {
@@ -97,7 +97,7 @@ const BestHotels = () => {
   return (
     <section className="py-20 bg-[#f4f7f9]">
       <Container>
-        <div className="flex flex-col items-start mb-15">
+        <div className="flex flex-col items-start mb-10">
           <div className="flex items-center gap-3 mb-3">
             <span className="w-1.5 h-6 rounded-full bg-primaryColor"></span>
             <span className="text-sm font-bold text-primaryColor uppercase tracking-[0.15em]">

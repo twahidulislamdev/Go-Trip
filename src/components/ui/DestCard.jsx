@@ -1,7 +1,7 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
 
-export default function HotelCard() {
+export default function DestCard() {
   return (
     <div className="px-5 py-4">
       <div className="flex items-center gap-2">
@@ -22,20 +22,20 @@ export default function HotelCard() {
           </svg>
           <div className="min-w-0">
             <p className="text-base font-bold text-neutral-900 truncate leading-tight">
-              Cox&apos;s Bazar
+              London
             </p>
             <p className="text-[11.5px] text-neutral-400 truncate leading-tight">
-              Cox&apos;s Bazar, Bangladesh
+              United Kingdom
             </p>
           </div>
         </div>
         <div className="flex items-center gap-3 px-4 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 min-w-[270px]">
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
-            08
+            02
           </span>
           <div>
             <p className="text-[13px] font-bold text-neutral-900 leading-tight">
-              June, Monday
+              March, Wednesday
             </p>
             <p className="text-[11.5px] text-neutral-400 leading-tight">
               Check-in
@@ -44,11 +44,11 @@ export default function HotelCard() {
         </div>
         <div className="flex items-center gap-3 px-4 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 min-w-[270px]">
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
-            10
+            11
           </span>
           <div>
             <p className="text-[13px] font-bold text-neutral-900 leading-tight">
-              June, Wednesday
+              April, Friday
             </p>
             <p className="text-[11.5px] text-neutral-400 leading-tight">
               Check-out

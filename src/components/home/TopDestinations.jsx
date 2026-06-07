@@ -63,7 +63,7 @@ export default function TopDestinations() {
               Explore the World
             </span>
           </div>
-          <h2 className="text-5xl font-black text-[#0a1128] tracking-tight">
+          <h2 className="text-4xl font-black text-[#0a1128] tracking-tight">
             Top Destinations
           </h2>
         </div>

@@ -6,7 +6,7 @@ const NavLink = ({ href, children }) => {
   const pathname = usePathname();
   return (
     <Link
-      className={`${pathname.startsWith(href) ? "bg-sky-500 text-white px-5 py-2" : "text-white px-5 py-2"}`}
+      className={`${pathname.startsWith(href) ? "text-primaryColor px-1.5 py-2 border-b-2 border-primaryColor" : "text-white px-1.5 py-2 transition-all duration-300"}`}
       href={href}
     >
       {children}

@@ -1,9 +1,9 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
 
-export default function DestCard() {
+export default function DesSearchCard({ className }) {
   return (
-    <div className="px-5 py-4 space-y-4">
+    <div className={`px-5 py-3 space-y-5 ${className}`}>
       <div className="flex items-center opacity-0 pointer-events-none select-none">
         <button className="px-3.5 py-2 text-[13px] font-semibold border rounded-xl">
           Placeholder

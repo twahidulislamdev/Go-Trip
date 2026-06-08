@@ -1,9 +1,9 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
 
-export default function HotelCard() {
+export default function HotelSearchCard({className}) {
   return (
-    <div className="px-5 py-3 space-y-3">
+    <div className={`px-5 py-3 space-y-3 ${className}`}>
       <div className="flex items-center opacity-0 pointer-events-none select-none">
         <button className="px-3.5 py-2 text-[13px] font-semibold border rounded-xl">
           Placeholder

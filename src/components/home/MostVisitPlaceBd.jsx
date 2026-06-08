@@ -56,7 +56,7 @@ const destinations = [
 ];
 export default function MostVisitPlaceBd() {
   return (
-    <section className="py-5 bg-white px-3 lg:px-0">
+    <section className="py-5 px-3 lg:px-0">
       <Container>
         <div className="flex flex-col items-start mb-10">
           <div className="flex items-center gap-3 mb-3">

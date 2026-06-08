@@ -1,9 +1,14 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
 
-export default function DestCard() {
+export default function HotelCard() {
   return (
-    <div className="px-5 py-4">
+    <div className="px-5 py-3 space-y-3">
+      <div className="flex items-center opacity-0 pointer-events-none select-none">
+        <button className="px-3.5 py-2 text-[13px] font-semibold border rounded-xl">
+          Placeholder
+        </button>
+      </div>
       <div className="flex items-center gap-2">
         <div className="flex-[2] flex items-center gap-3 px-4 py-3.5 rounded-xl border border-neutral-200 bg-white hover:border-neutral-400 cursor-pointer transition-all duration-150">
           <svg
@@ -22,20 +27,20 @@ export default function DestCard() {
           </svg>
           <div className="min-w-0">
             <p className="text-base font-bold text-neutral-900 truncate leading-tight">
-              London
+              Cox&apos;s Bazar
             </p>
             <p className="text-[11.5px] text-neutral-400 truncate leading-tight">
-              United Kingdom
+              Cox&apos;s Bazar, Bangladesh
             </p>
           </div>
         </div>
         <div className="flex items-center gap-3 px-4 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 min-w-[270px]">
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
-            02
+            08
           </span>
           <div>
             <p className="text-[13px] font-bold text-neutral-900 leading-tight">
-              March, Wednesday
+              June, Monday
             </p>
             <p className="text-[11.5px] text-neutral-400 leading-tight">
               Check-in
@@ -44,11 +49,11 @@ export default function DestCard() {
         </div>
         <div className="flex items-center gap-3 px-4 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 min-w-[270px]">
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
-            11
+            10
           </span>
           <div>
             <p className="text-[13px] font-bold text-neutral-900 leading-tight">
-              April, Friday
+              June, Wednesday
             </p>
             <p className="text-[11.5px] text-neutral-400 leading-tight">
               Check-out

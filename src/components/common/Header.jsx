@@ -5,6 +5,8 @@ import Flex from "../ui/Flex";
 import Image from "next/image";
 import BrandLogo from "../../../public/brandLogo.png";
 import Button from "../ui/Button";
+import NavLink from "../ui/NavLink";
+import Link from "next/link";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,19 +24,15 @@ const Header = () => {
   }, []);
 
   const menuItems = [
-    "Destination",
-    "Hotel",
-    "Activity",
-    "Flights",
-    "Car Rent",
-    "Pages",
+    { title: "Destination", href: "/destination" },
+    { title: "Hotel", href: "/hotel" },
+    { title: "Activity", href: "/activity" },
+    { title: "Flights", href: "/flight" },
+    { title: "Car Rent", href: "/car-rent" },
+    { title: "Pages", href: "/pages" },
   ];
   return (
-    <div
-      className={`w-full fixed top-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
-      }`}
-    >
+    <div className="w-full fixed top-0 right-0 z-50 transition-all duration-300 bg-gradient-to-b from-blue-50/100 via-white to-pink-50/100">
       <Container>
         <Flex
           className={`justify-between items-center transition-all duration-300 ${
@@ -42,20 +40,24 @@ const Header = () => {
           }`}
         >
           <div className="">
-            <Image
-              src={BrandLogo}
-              alt="Go Trip Logo"
-              width={120}
-              height={120}
-            />
+            <Link href="/">
+              <Image
+                src={BrandLogo}
+                alt="Go Trip Logo"
+                width={120}
+                height={120}
+              />
+            </Link>
           </div>
-          <ul className="flex space-x-10">
+
+          <ul className="flex space-x-5">
             {menuItems.map((item) => (
-              <li
-                className="text-primaryColor font-semibold hover:text-neutral-800 cursor-pointer"
-                key={item}
-              >
-                {item}
+              <li key={item.title}>
+                <NavLink href={item.href}>
+                  <span className="text-black font-semibold cursor-pointer">
+                    {item.title}
+                  </span>
+                </NavLink>
               </li>
             ))}
           </ul>

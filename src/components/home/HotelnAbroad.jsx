@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "../ui/Container";
-import FeaturedHotelCard from "../ui/HotelCard";
+import FeaturedHotelCard from "../ui/FeaturedHotelCard";
 
 const hotels = [
   {
@@ -95,7 +95,7 @@ const hotels = [
 
 const BestHotels = () => {
   return (
-    <section className="py-20 bg-[#f4f7f9]">
+    <section className="py-20 bg-gradient-to-b from-blue-50/100 via-white to-pink-50/100">
       <Container>
         <div className="flex flex-col items-start mb-10">
           <div className="flex items-center gap-3 mb-3">

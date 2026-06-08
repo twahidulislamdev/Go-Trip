@@ -8,11 +8,11 @@ import {
   BsCarFrontFill,
 } from "react-icons/bs";
 import { MdOutlineSurfing } from "react-icons/md";
-import DestCard from "../ui/DestCard";
-import HotelCard from "../ui/HotelCard";
-import ActivityCard from "../ui/ActivityCard";
-import FlightsCard from "../ui/FlightsCard";
-import CarCard from "../ui/CarCard";
+import DestCard from "../ui/DestSearchCard";
+import HotelCard from "../ui/HotelSearchCard";
+import ActivityCard from "../ui/ActivitySearchCard";
+import FlightsCard from "../ui/FlightsSearchCard";
+import CarCard from "../ui/CarSearchCard";
 
 // ------------------ Tab Config Start ------------------------
 const TABS = [
@@ -59,84 +59,7 @@ const Banner = () => {
 
   return (
     <>
-      {/* Font import only — no other CSS rules */}
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Outfit:wght@400;500;600;700&display=swap');`}</style>
-      <div className="relative overflow-hidden bg-slate-50 py-16 md:py-24">
-        {/* ── Subtle grid background ── */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:48px_48px] opacity-40 pointer-events-none" />
-
-        {/* ── Soft corner glows ── */}
-        <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-indigo-100 opacity-60 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-violet-100 opacity-50 blur-3xl pointer-events-none" />
-
-        {/* ── Floating destination badges (left) ── */}
-        <div className="absolute left-4 top-[15%] hidden xl:flex flex-col gap-3 pointer-events-none animate-bounce [animation-duration:4s]">
-          {[FLOAT_BADGES[0], FLOAT_BADGES[1]].map(
-            ({ label, sub, rating, emoji }) => (
-              <div
-                key={label}
-                className="flex items-center gap-2.5 bg-white/90 backdrop-blur-sm border border-white rounded-2xl px-3.5 py-2.5 shadow-sm min-w-[140px]"
-              >
-                <span className="text-xl">{emoji}</span>
-                <div>
-                  <p
-                    className="text-[12.5px] font-bold text-slate-800 leading-tight"
-                    style={{ fontFamily: "'Outfit', sans-serif" }}
-                  >
-                    {label}
-                  </p>
-                  <p
-                    className="text-[10.5px] text-slate-400 leading-tight"
-                    style={{ fontFamily: "'Outfit', sans-serif" }}
-                  >
-                    {sub}
-                  </p>
-                  <p
-                    className="text-[11px] font-semibold text-amber-500 leading-tight"
-                    style={{ fontFamily: "'Outfit', sans-serif" }}
-                  >
-                    ⭐ {rating}
-                  </p>
-                </div>
-              </div>
-            ),
-          )}
-        </div>
-
-        {/* ── Floating destination badges (right) ── */}
-        <div className="absolute right-4 top-[15%] hidden xl:flex flex-col gap-3 pointer-events-none animate-bounce [animation-duration:5s] [animation-delay:0.3s]">
-          {[FLOAT_BADGES[2], FLOAT_BADGES[3]].map(
-            ({ label, sub, rating, emoji }) => (
-              <div
-                key={label}
-                className="flex items-center gap-2.5 bg-white/90 backdrop-blur-sm border border-white rounded-2xl px-3.5 py-2.5 shadow-sm min-w-[140px]"
-              >
-                <span className="text-xl">{emoji}</span>
-                <div>
-                  <p
-                    className="text-[12.5px] font-bold text-slate-800 leading-tight"
-                    style={{ fontFamily: "'Outfit', sans-serif" }}
-                  >
-                    {label}
-                  </p>
-                  <p
-                    className="text-[10.5px] text-slate-400 leading-tight"
-                    style={{ fontFamily: "'Outfit', sans-serif" }}
-                  >
-                    {sub}
-                  </p>
-                  <p
-                    className="text-[11px] font-semibold text-amber-500 leading-tight"
-                    style={{ fontFamily: "'Outfit', sans-serif" }}
-                  >
-                    ⭐ {rating}
-                  </p>
-                </div>
-              </div>
-            ),
-          )}
-        </div>
-
+      <div className="relative overflow-hidden py-10 md:py-25">
         {/* ── Main content ── */}
         <Container className="relative z-10 pt-20">
           {/* Eyebrow pill */}
@@ -198,11 +121,11 @@ const Banner = () => {
           </p>
 
           {/* Stats */}
-          <div className="flex justify-center flex-wrap gap-2.5 mb-10 ">
+          <div className="flex justify-center flex-wrap gap-2.5 mb-10 cursor-pointer ">
             {STATS.map(({ value, label, emoji }) => (
               <div
                 key={label}
-                className="flex items-center gap-2 bg-white border border-slate-100 rounded-full px-3 py-2 shadow-sm hover:-translate-y-0.5 transition-transform duration-200 cursor-default"
+                className="flex items-center gap-2 bg-white border border-slate-100 rounded-full px-3 py-2 shadow-sm hover:-translate-y-0.5 transition-transform duration-200 cursor-pointer"
               >
                 <span className="text-sm">{emoji}</span>
                 <span
@@ -222,14 +145,14 @@ const Banner = () => {
           </div>
 
           {/* Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 mb-3">
+          <div className="flex flex-wrap justify-center gap-2 mb-3 cursor-pointer">
             {TABS.map(({ key, label, Icon }) => {
               const active = activeTab === key;
               return (
                 <button
                   key={key}
                   onClick={() => setActiveTab(key)}
-                  className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl border text-[13px] font-semibold transition-all duration-200 hover:-translate-y-0.5
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl border text-[13px] font-semibold transition-all duration-200 hover:-translate-y-0.5 cursor-pointer
                     ${
                       active
                         ? "bg-indigo-600 border-indigo-600 text-white shadow-lg shadow-indigo-200"

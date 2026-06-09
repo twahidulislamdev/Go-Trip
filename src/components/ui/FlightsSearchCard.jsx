@@ -28,8 +28,8 @@ export default function FlightsCard() {
             <button
               key={o}
               onClick={() => setTrip(o)}
-              className={`px-3.5 py-1.5 rounded-xl border text-[12px] font-semibold transition-all duration-150
-                ${trip === o ? "bg-neutral-900 border-neutral-900 text-baseyellow shadow-sm" : "bg-neutral-50 border-neutral-200 text-neutral-600 hover:border-neutral-400 hover:bg-white"}`}
+              className={`px-3.5 py-1.5 rounded-xl border text-[12px] font-semibold transition-all duration-150 cursor-pointer hover:bg-black
+                ${trip === o ? "bg-primaryColor border-primaryColor text-white shadow-sm" : "bg-neutral-50 border-neutral-200 text-neutral-600 hover:border-neutral-400 hover:bg-white"}`}
             >
               {o}
             </button>
@@ -135,8 +135,8 @@ export default function FlightsCard() {
           </div>
         )}
         {/* FIXED: w-14 h-14 */}
-        <button className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center bg-primaryColor transition-all duration-150 active:scale-[0.97]">
-          <BsSearch className="text-baseyellow text-lg font-extrabold" />
+        <button className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center bg-primaryColor transition-all duration-150 active:scale-[0.97] hover:bg-black cursor-pointer">
+          <BsSearch className="text-white text-lg font-extrabold" />
         </button>
       </div>
     </div>

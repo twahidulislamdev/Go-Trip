@@ -102,7 +102,7 @@ export default function DestinationCard() {
               <p className="text-[13px] font-bold text-gray-900">Exceptional</p>
               <p className="text-[12px] text-gray-500">1,245 reviews</p>
             </div>
-            <div className="bg-[#003580] text-white text-[18px] font-extrabold rounded-lg rounded-bl-none px-3 py-2 leading-none">
+            <div className="bg-primaryColor text-white text-[18px] font-extrabold rounded-lg rounded-bl-none px-3 py-2 leading-none">
               4.9
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function DestinationCard() {
             <p className="text-[12px] text-gray-500">
               Includes taxes and fees
             </p>
-            <button className="mt-3 bg-[#006ce4] hover:bg-[#0057b8] text-white text-[14px] font-bold rounded-lg px-4 py-3 flex items-center gap-1.5 transition-colors whitespace-nowrap">
+            <button className="mt-3 bg-primaryColor hover:bg-[#0057b8] text-white text-[14px] font-bold rounded-lg px-4 py-3 flex items-center gap-1.5 transition-colors whitespace-nowrap">
               View Details
               <svg
                 viewBox="0 0 24 24"

@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { BsSearch, BsArrowLeftRight } from "react-icons/bs";
 
-export default function CarCard() {
+export default function CarCard({ className }) {
   const [trip, setTrip] = useState("One Way");
   const [passengers, setPassengers] = useState(1);
   const swap = () => {};
   return (
-    <div className="px-5 py-4 space-y-4">
+    <div className={`px-5 py-3 space-y-5 ${className}`}>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           {["One Way", "Round Trip"].map((o) => (
             <button
               key={o}
               onClick={() => setTrip(o)}
-              className={`px-3.5 py-1.5 rounded-xl border text-[12px] font-semibold transition-all duration-150
-                ${trip === o ? "bg-neutral-900 border-neutral-900 text-baseyellow shadow-sm" : "bg-neutral-50 border-neutral-200 text-neutral-600 hover:border-neutral-400 hover:bg-white"}`}
+              className={`px-3.5 py-1.5 rounded-xl border text-[12px] font-semibold transition-all duration-150 cursor-pointer hover:bg-black
+                ${trip === o ? "bg-primaryColor border-primaryColor text-white shadow-sm" : "bg-neutral-50 border-neutral-200 text-neutral-600 hover:border-neutral-400 hover:bg-white"}`}
             >
               {o}
             </button>
@@ -121,7 +121,7 @@ export default function CarCard() {
         )}
         {/* FIXED: w-14 h-14 */}
         <button className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center bg-primaryColor transition-all duration-150 active:scale-[0.97] cursor-pointer hover:bg-black">
-          <BsSearch className="text-baseyellow text-lg font-extrabold" />
+          <BsSearch className="text-white text-lg font-extrabold" />
         </button>
       </div>
     </div>

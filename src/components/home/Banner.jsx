@@ -10,7 +10,7 @@ import {
 import { MdOutlineSurfing } from "react-icons/md";
 import DestCard from "../ui/DestSearchCard";
 import HotelCard from "../ui/HotelSearchCard";
-import ActivityCard from "../ui/ActivitySearchCard";
+import ActivitySearchCard from "../ui/ActivitySearchCard";
 import FlightsCard from "../ui/FlightsSearchCard";
 import CarCard from "../ui/CarSearchCard";
 
@@ -47,7 +47,7 @@ const FLOAT_BADGES = [
 const CARD_MAP = {
   dest: DestCard,
   hotel: HotelCard,
-  activity: ActivityCard,
+  activity: ActivitySearchCard,
   flights: FlightsCard,
   car: CarCard,
 };
@@ -155,8 +155,8 @@ const Banner = () => {
                   className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl border text-[13px] font-semibold transition-all duration-200 hover:-translate-y-0.5 cursor-pointer
                     ${
                       active
-                        ? "bg-indigo-600 border-indigo-600 text-white shadow-lg shadow-indigo-200"
-                        : "bg-white border-slate-200 text-slate-500 hover:border-indigo-200 hover:text-indigo-500"
+                        ? "bg-primaryColor border-primaryColor text-white shadow-sm shadow-primaryColor"
+                        : "bg-white border-slate-200 text-slate-500 hover:border-primaryColor hover:text-primaryColor"
                     }`}
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >

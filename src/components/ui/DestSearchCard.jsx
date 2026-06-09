@@ -73,8 +73,8 @@ export default function DesSearchCard({ className }) {
             </p>
           </div>
         </div>
-        <button className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center bg-primaryColor transition-all duration-150 active:scale-[0.97]">
-          <BsSearch className="text-baseyellow text-lg font-extrabold" />
+        <button className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center bg-primaryColor transition-all duration-150 active:scale-[0.97] hover:bg-black cursor-pointer">
+          <BsSearch className="text-white text-lg font-extrabold" />
         </button>
       </div>
     </div>

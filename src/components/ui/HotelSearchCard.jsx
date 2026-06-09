@@ -3,7 +3,7 @@ import { BsSearch } from "react-icons/bs";
 
 export default function HotelSearchCard({className}) {
   return (
-    <div className={`px-5 py-3 space-y-3 ${className}`}>
+    <div className={`px-5 py-3 space-y-5 ${className}`}>
       <div className="flex items-center opacity-0 pointer-events-none select-none">
         <button className="px-3.5 py-2 text-[13px] font-semibold border rounded-xl">
           Placeholder
@@ -73,8 +73,8 @@ export default function HotelSearchCard({className}) {
             </p>
           </div>
         </div>
-        <button className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center bg-primaryColor transition-all duration-150 active:scale-[0.97]">
-          <BsSearch className="text-baseyellow text-lg font-extrabold" />
+        <button className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center bg-primaryColor transition-all duration-150 active:scale-[0.97] hover:bg-black cursor-pointer">
+          <BsSearch className="text-white text-lg font-extrabold" />
         </button>
       </div>
     </div>

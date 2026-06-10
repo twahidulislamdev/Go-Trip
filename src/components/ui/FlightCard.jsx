@@ -6,8 +6,8 @@ export default function FlightCard() {
   const [wishlisted, setWishlisted] = useState(false);
 
   return (
-    <article className="bg-white rounded-xl shadow-sm border border-gray-200 flex overflow-hidden w-full hover:shadow-md transition-shadow">
-      <div className="relative w-[260px] flex-shrink-0 bg-gradient-to-br from-sky-100 to-blue-50 p-4 flex flex-col justify-between">
+    <article className="bg-white rounded-xl border border-gray-200 shadow-sm transition-shadow hover:shadow-md flex w-full flex-col overflow-hidden md:flex-row">
+      <div className="relative w-full bg-gradient-to-br from-sky-100 to-blue-50 p-4 md:w-[260px] md:flex-shrink-0 flex flex-col justify-between">
         <div>
           <p className="text-[11px] uppercase tracking-[0.25em] text-blue-700 font-semibold">Best value</p>
           <h3 className="mt-2 text-[18px] font-extrabold text-gray-900">Biman Bangladesh</h3>
@@ -54,8 +54,8 @@ export default function FlightCard() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-between items-end px-5 py-4 min-w-[180px] border-l border-gray-100">
-        <div className="text-right">
+      <div className="flex flex-col justify-between items-start gap-3 border-t border-gray-100 px-5 py-4 md:items-end md:min-w-[180px] md:border-l md:border-t-0">
+        <div className="text-left md:text-right">
           <p className="text-[12px] text-gray-500">From</p>
           <p className="text-[26px] font-extrabold text-gray-900 leading-tight">US$79</p>
           <p className="text-[12px] text-gray-500">per traveller</p>

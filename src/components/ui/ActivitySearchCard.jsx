@@ -40,8 +40,8 @@ export default function ActivitySearchCard({ className = "" }) {
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
             {startDate}
           </span>
-          <div>
-            <p className="text-base font-bold text-neutral-900 leading-tight">
+          <div className="min-w-0">
+            <p className="truncate text-[13px] font-bold leading-tight text-neutral-900 sm:text-base">
               June, Monday
             </p>
             <p className="text-xs text-neutral-500 leading-tight">Start Date</p>
@@ -53,8 +53,8 @@ export default function ActivitySearchCard({ className = "" }) {
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
             {endDate}
           </span>
-          <div>
-            <p className="text-base font-bold text-neutral-900 leading-tight">
+          <div className="min-w-0">
+            <p className="truncate text-[13px] font-bold leading-tight text-neutral-900 sm:text-base">
               June, Wednesday
             </p>
             <p className="text-xs text-neutral-500 leading-tight">End Date</p>
@@ -66,8 +66,8 @@ export default function ActivitySearchCard({ className = "" }) {
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
             {people}
           </span>
-          <div>
-            <p className="text-base font-bold text-neutral-900 leading-tight">
+          <div className="min-w-0">
+            <p className="truncate text-[13px] font-bold leading-tight text-neutral-900 sm:text-base">
               1 person
             </p>
             <p className="text-xs text-neutral-500 leading-tight">People</p>

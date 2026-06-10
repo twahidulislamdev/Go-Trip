@@ -1,9 +1,10 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
 
-export default function HotelSearchCard({className}) {
+export default function HotelSearchCard({ className }) {
   return (
     <div className={`px-3 py-3 sm:px-5 sm:py-4 ${className}`}>
+      <div className="flex items-center opacity-0 pointer-events-none select-none"></div>
       <div className="flex h-full flex-col gap-2 md:flex-row md:flex-wrap lg:flex-nowrap">
         <div className="flex h-full w-full min-w-0 items-center gap-3 px-4 py-3.5 rounded-xl border border-neutral-200 bg-white hover:border-neutral-400 cursor-pointer transition-all duration-150 md:flex-[2]">
           <svg

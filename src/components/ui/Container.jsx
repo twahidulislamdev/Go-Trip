@@ -2,7 +2,9 @@ import React from "react";
 
 const Container = ({ children, className }) => {
   return (
-    <div className={`w-full lg:w-[1320px] m-auto ${className}`}>{children}</div>
+    <div className={`mx-auto w-full max-w-[1320px] px-4 sm:px-5 lg:px-6 ${className || ""}`}>
+      {children}
+    </div>
   );
 };
 

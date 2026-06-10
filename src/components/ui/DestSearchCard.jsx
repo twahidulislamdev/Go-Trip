@@ -33,7 +33,7 @@ export default function DesSearchCard({ className }) {
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
             02
           </span>
-          <div>
+          <div className="min-w-0">
             <p className="text-[13px] font-bold text-neutral-900 leading-tight">
               March, Wednesday
             </p>
@@ -46,7 +46,7 @@ export default function DesSearchCard({ className }) {
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
             11
           </span>
-          <div>
+          <div className="min-w-0">
             <p className="text-[13px] font-bold text-neutral-900 leading-tight">
               April, Friday
             </p>
@@ -59,7 +59,7 @@ export default function DesSearchCard({ className }) {
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
             02
           </span>
-          <div>
+          <div className="min-w-0">
             <p className="text-[13px] font-bold text-neutral-900 leading-tight">
               Guests
             </p>

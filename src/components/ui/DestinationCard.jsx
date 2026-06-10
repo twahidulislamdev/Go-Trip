@@ -6,9 +6,9 @@ export default function DestinationCard() {
   const [wishlisted, setWishlisted] = useState(false);
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-200 flex overflow-hidden w-full hover:shadow-md transition-shadow">
+    <div className="bg-white rounded-xl border border-gray-200 shadow-sm transition-shadow hover:shadow-md flex w-full min-w-0 flex-col overflow-hidden lg:flex-row">
         {/* Image Section */}
-        <div className="relative w-[400px] flex-shrink-0">
+        <div className="relative h-52 w-full sm:h-60 lg:h-auto lg:w-[300px] xl:w-[360px] lg:flex-shrink-0">
           <img
             src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&h=300&fit=crop&auto=format"
             alt="Bali Destination"
@@ -33,9 +33,9 @@ export default function DestinationCard() {
         </div>
 
         {/* Middle Content */}
-        <div className="flex-1 px-5 py-4 flex flex-col gap-1">
+        <div className="flex min-w-0 flex-1 flex-col gap-1 px-4 py-4 sm:px-5">
           {/* Destination Name */}
-          <h2 className="text-[17px] font-extrabold text-gray-900 leading-snug">
+          <h2 className="text-base font-extrabold text-gray-900 leading-snug sm:text-[17px]">
             Bali Paradise 7 Days 6 Nights Experience
           </h2>
 
@@ -95,10 +95,10 @@ export default function DestinationCard() {
         </div>
 
         {/* Right Panel */}
-        <div className="flex flex-col justify-between items-end px-5 py-4 min-w-[180px] border-l border-gray-100">
+        <div className="flex flex-col justify-between items-start gap-3 border-t border-gray-100 px-4 py-4 sm:flex-row sm:items-end sm:px-5 lg:min-w-[170px] lg:flex-col lg:items-end lg:border-l lg:border-t-0">
           {/* Score */}
           <div className="flex items-center gap-2">
-            <div className="text-right">
+            <div className="text-left md:text-right">
               <p className="text-[13px] font-bold text-gray-900">Exceptional</p>
               <p className="text-[12px] text-gray-500">1,245 reviews</p>
             </div>
@@ -108,7 +108,7 @@ export default function DestinationCard() {
           </div>
 
           {/* Price + CTA */}
-          <div className="text-right">
+          <div className="w-full text-left sm:w-auto sm:text-right">
             <p className="text-[12px] text-gray-500">7 days, per adult</p>
             <p className="text-[26px] font-extrabold text-gray-900 leading-tight">
               US$850
@@ -116,7 +116,7 @@ export default function DestinationCard() {
             <p className="text-[12px] text-gray-500">
               Includes taxes and fees
             </p>
-            <button className="mt-3 bg-primaryColor hover:bg-[#0057b8] text-white text-[14px] font-bold rounded-lg px-4 py-3 flex items-center gap-1.5 transition-colors whitespace-nowrap">
+            <button className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-lg bg-primaryColor px-4 py-3 text-[14px] font-bold text-white transition-colors hover:bg-[#0057b8] sm:w-auto">
               View Details
               <svg
                 viewBox="0 0 24 24"

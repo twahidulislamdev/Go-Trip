@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ActivitySidebar() {
   return (
-    <div className="w-full bg-white p-5 border border-gray-200 rounded-xl shadow-sm flex flex-col gap-6">
+    <div className="flex w-full flex-col gap-5 rounded-xl border border-gray-200 bg-white p-4 shadow-sm sm:gap-6 sm:p-5">
       <div>
         <h4 className="text-[15px] font-bold text-gray-900 mb-3">
           Search by activity name
@@ -25,7 +25,7 @@ export default function ActivitySidebar() {
           <input
             type="text"
             placeholder="e.g. Surf lesson, Cooking class"
-            className="w-full border border-gray-300 rounded-lg py-2.5 pl-9 pr-3 text-[13.5px] text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+            className="w-full rounded-lg border border-gray-300 py-2.5 pl-9 pr-3 text-[13.5px] text-gray-700 transition-colors focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
       </div>

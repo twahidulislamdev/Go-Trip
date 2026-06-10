@@ -61,12 +61,12 @@ const Banner = () => {
     <>
       <div className="relative overflow-hidden py-8 sm:py-10 md:py-16 lg:py-25">
         {/* ── Main content ── */}
-        <Container className="relative z-10 px-4 pt-16 sm:px-6 sm:pt-20 lg:px-0">
+        <Container className="relative z-10 pt-14 sm:pt-20">
           {/* Eyebrow pill */}
 
           {/* Headline */}
           <h1
-            className="text-center text-2xl md:text-6xl font-black text-slate-900 leading-[1.08] tracking-tight mb-5 animate-[fadeInUp_0.6s_ease_both]"
+            className="mx-auto mb-5 max-w-4xl text-center text-3xl font-black leading-[1.08] text-slate-900 animate-[fadeInUp_0.6s_ease_both] sm:text-4xl md:text-5xl lg:text-6xl"
             style={{ fontFamily: "'Fraunces', serif" }}
           >
             Find Your Next{" "}
@@ -99,7 +99,7 @@ const Banner = () => {
 
           {/* Subheading */}
           <p
-            className="text-center text-xs sm:text-base text-slate-500 max-w-md mx-auto mb-7 sm:mb-8 leading-relaxed"
+            className="mx-auto mb-5 max-w-md text-center text-sm leading-relaxed text-slate-500 sm:mb-5 sm:text-base"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Discover destinations, stays, flights &amp; more —{" "}
@@ -133,30 +133,34 @@ const Banner = () => {
           </div>
 
           {/* Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 mb-3 cursor-pointer">
-            {TABS.map(({ key, label, Icon }) => {
-              const active = activeTab === key;
-              return (
-                <button
-                  key={key}
-                  onClick={() => setActiveTab(key)}
-                  className={`flex  items-center justify-center gap-2 px-3 lg:px-5 py-2 rounded-lg border text-[10px] lg:text-xs font-semibold transition-all duration-200 hover:-translate-y-0.5 cursor-pointer 
-                    ${
-                      active
-                        ? "bg-primaryColor border-primaryColor text-white shadow-sm shadow-primaryColor"
-                        : "bg-white border-slate-200 text-slate-500 hover:border-primaryColor hover:text-primaryColor"
-                    }`}
-                  style={{ fontFamily: "'Outfit', sans-serif" }}
-                >
-                  <Icon className="text-[14px]" />
-                  {label}
-                </button>
-              );
-            })}
+          <div className="mb-3 flex justify-center">
+            <div className="flex w-full max-w-5xl flex-wrap justify-center gap-3">
+              {TABS.map(({ key, label, Icon }) => {
+                const active = activeTab === key;
+                return (
+                  <button
+                    key={key}
+                    onClick={() => setActiveTab(key)}
+                    type="button"
+                    aria-pressed={active}
+                    className={`flex min-h-10 basis-[calc(33.333%-0.5rem)] items-center justify-center gap-2 rounded-xl border px-3 py-1 text-[11px] font-semibold tracking-wide shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98] sm:basis-auto sm:px-4 sm:py-3 sm:text-xs md:px-5 lg:px-6 lg:text-sm
+                      ${
+                        active
+                          ? "border-primaryColor bg-primaryColor text-white shadow-primaryColor/30"
+                          : "border-slate-200 bg-white text-slate-500 hover:border-primaryColor hover:text-primaryColor"
+                      }`}
+                    style={{ fontFamily: "'Outfit', sans-serif" }}
+                  >
+                    <Icon className="text-[13px] sm:text-[14px]" />
+                    {label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           {/* Search card */}
-          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl shadow-slate-200/80 border border-slate-100 overflow-hidden">
+          <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-xl shadow-slate-200/80 sm:rounded-3xl">
             <ActiveCard />
           </div>
 

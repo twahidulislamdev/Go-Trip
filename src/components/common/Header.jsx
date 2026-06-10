@@ -26,8 +26,8 @@ const Header = () => {
   }, []);
 
   const menuItems = [
-    { title: "Destination", href: "/destination" },
     { title: "Hotel", href: "/hotel" },
+    { title: "Destination", href: "/destination" },
     { title: "Activity", href: "/activity" },
     { title: "Flights", href: "/flight" },
     { title: "Car Rent", href: "/car-rent" },

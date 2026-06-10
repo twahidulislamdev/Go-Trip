@@ -21,9 +21,9 @@ export default function FlightsCard() {
   };
   const CLASSES = ["Economy", "Business", "First"];
   return (
-    <div className="px-5 py-4 space-y-4">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
+    <div className="px-3 py-3 space-y-4 sm:px-5 sm:py-4">
+      <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-wrap items-center gap-2">
           {["One Way", "Round Trip", "Multi City"].map((o) => (
             <button
               key={o}
@@ -35,7 +35,7 @@ export default function FlightsCard() {
             </button>
           ))}
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <button
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-neutral-200 bg-white hover:border-neutral-400 transition-all duration-150"
             onClick={() => setPassengers((v) => (v % 9) + 1)}
@@ -83,8 +83,8 @@ export default function FlightsCard() {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-2">
-        <div className="flex-[2] flex items-center gap-3 px-3 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150">
+      <div className="flex flex-col gap-2 md:flex-row md:flex-wrap lg:flex-nowrap">
+        <div className="flex w-full min-w-0 items-center gap-3 px-3 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 md:flex-[2]">
           <span className="text-xl font-black text-neutral-900 tracking-tight w-10 flex-shrink-0 border-r border-neutral-500 pr-15">
             {from.code}
           </span>
@@ -99,11 +99,11 @@ export default function FlightsCard() {
         </div>
         <button
           onClick={swap}
-          className="w-10 h-10 rounded-full border border-black flex-shrink-0 flex items-center justify-center hover:rotate-180 transition-all duration-300 bg-white shadow-sm"
+          className="h-10 w-full rounded-xl border border-black flex-shrink-0 flex items-center justify-center hover:rotate-180 transition-all duration-300 bg-white shadow-sm md:w-10 md:rounded-full"
         >
           <BsArrowLeftRight className="text-sm text-black" />
         </button>
-        <div className="flex-[2] flex items-center gap-3 px-3 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150">
+        <div className="flex w-full min-w-0 items-center gap-3 px-3 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 md:flex-[2]">
           <span className="text-xl font-black text-neutral-900 tracking-tight w-10 flex-shrink-0 border-r border-neutral-500 pr-15">
             {to.code}
           </span>
@@ -114,7 +114,7 @@ export default function FlightsCard() {
             <p className="text-[11.5px] text-neutral-400 truncate">{to.sub}</p>
           </div>
         </div>
-        <div className="flex-1 flex items-center gap-3 px-10 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150">
+        <div className="flex w-full min-w-0 items-center gap-3 px-4 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 md:flex-1 lg:px-6 xl:px-10">
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
             06
           </span>
@@ -124,7 +124,7 @@ export default function FlightsCard() {
           </div>
         </div>
         {trip !== "One Way" && (
-          <div className="flex-1 flex items-center gap-3 px-10 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150">
+          <div className="flex w-full min-w-0 items-center gap-3 px-4 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 md:flex-1 lg:px-6 xl:px-10">
             <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
               08
             </span>
@@ -135,7 +135,7 @@ export default function FlightsCard() {
           </div>
         )}
         {/* FIXED: w-14 h-14 */}
-        <button className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center bg-primaryColor transition-all duration-150 active:scale-[0.97] hover:bg-black cursor-pointer">
+        <button className="flex h-12 w-full items-center justify-center rounded-xl bg-primaryColor transition-all duration-150 active:scale-[0.97] hover:bg-black cursor-pointer md:h-14 md:w-14 md:flex-shrink-0">
           <BsSearch className="text-white text-lg font-extrabold" />
         </button>
       </div>

@@ -1,6 +1,10 @@
 import React from "react";
 import Container from "../ui/Container";
 import FeaturedHotelCard from "../ui/FeaturedHotelCard";
+import SectionSlider from "../ui/SectionSlider";
+import SliderControls from "../ui/SliderControls";
+
+const sliderNavId = "hotel-in-bd";
 
 export const hotels = [
   {
@@ -104,25 +108,28 @@ export const hotels = [
 
 const HotelInBd = () => {
   return (
-    <section className="py-10 bg-gradient-to-b from-blue-50/100 via-white to-pink-50/100">
+    <section className="bg-gradient-to-b from-blue-50/100 via-white to-pink-50/100 px-3 py-8 sm:px-5 sm:py-10 lg:px-0">
       <Container>
-        <div className="flex flex-col items-start mb-10">
-          <div className="flex items-center gap-3 mb-3">
-            <span className="w-1.5 h-6 rounded-full bg-primaryColor"></span>
-            <span className="text-sm font-bold text-primaryColor uppercase tracking-[0.15em]">
-              Hotels in Bangladesh
-            </span>
+        <div className="mb-5 flex items-end justify-between gap-4 sm:mb-10">
+          <div className="min-w-0">
+            <div className="flex justify-start items-center gap-2 mb-3">
+              <span className="w-1.5 h-5 rounded-full bg-primaryColor"></span>
+              <span className="text-[10px] lg:text-sm font-bold text-primaryColor uppercase tracking-[0.15em] ">
+                Hotels in Bangladesh
+              </span>
+            </div>
+            <h2 className="text-2xl lg:text-4xl font-black text-primaryColor tracking-tight">
+              Best Hotels for Your Next Trip
+            </h2>
           </div>
-          <h2 className="text-4xl font-black text-[#0a1128] tracking-tight">
-            Best Hotels for Your Next Trip
-          </h2>
+          <SliderControls navId={sliderNavId} />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <SectionSlider slideClassName="h-auto" navId={sliderNavId}>
           {hotels.map((hotel) => (
             <FeaturedHotelCard key={hotel.id} hotel={hotel} />
           ))}
-        </div>
+        </SectionSlider>
       </Container>
     </section>
   );

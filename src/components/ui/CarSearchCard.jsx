@@ -6,9 +6,9 @@ export default function CarCard({ className }) {
   const [passengers, setPassengers] = useState(1);
   const swap = () => {};
   return (
-    <div className={`px-5 py-3 space-y-5 ${className}`}>
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
+    <div className={`px-3 py-3 space-y-4 sm:px-5 sm:space-y-5 ${className}`}>
+      <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-wrap items-center gap-2">
           {["One Way", "Round Trip"].map((o) => (
             <button
               key={o}
@@ -42,8 +42,8 @@ export default function CarCard({ className }) {
           </svg>
         </button>
       </div>
-      <div className="flex items-center gap-2">
-        <div className="flex-1 flex items-center gap-3 px-3 py-3.5 rounded-xl border border-neutral-200 bg-white hover:border-neutral-400 cursor-pointer transition-all duration-150">
+      <div className="flex flex-col gap-2 md:flex-row md:flex-wrap lg:flex-nowrap">
+        <div className="flex w-full min-w-0 items-center gap-3 px-3 py-3.5 rounded-xl border border-neutral-200 bg-white hover:border-neutral-400 cursor-pointer transition-all duration-150 md:flex-1">
           <svg
             width="18"
             height="18"
@@ -69,11 +69,11 @@ export default function CarCard({ className }) {
         </div>
         <button
           onClick={swap}
-          className="w-9 h-10 rounded-full border border-black flex-shrink-0 flex items-center justify-center hover:rotate-180 transition-all duration-300 bg-white shadow-sm"
+          className="h-10 w-full rounded-xl border border-black flex-shrink-0 flex items-center justify-center hover:rotate-180 transition-all duration-300 bg-white shadow-sm md:w-9 md:rounded-full"
         >
           <BsArrowLeftRight className="text-sm text-black" />
         </button>
-        <div className="flex-1 flex items-center gap-3 px-3 py-3.5 rounded-xl border border-neutral-200 bg-white hover:border-neutral-400 cursor-pointer transition-all duration-150">
+        <div className="flex w-full min-w-0 items-center gap-3 px-3 py-3.5 rounded-xl border border-neutral-200 bg-white hover:border-neutral-400 cursor-pointer transition-all duration-150 md:flex-1">
           <svg
             width="18"
             height="18"
@@ -97,7 +97,7 @@ export default function CarCard({ className }) {
             </p>
           </div>
         </div>
-        <div className="flex-1 flex items-center gap-3 px-3 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150">
+        <div className="flex w-full min-w-0 items-center gap-3 px-3 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 md:flex-1">
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
             02
           </span>
@@ -107,7 +107,7 @@ export default function CarCard({ className }) {
           </div>
         </div>
         {trip === "Round Trip" && (
-          <div className="flex-1 flex items-center gap-3 px-3 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150">
+          <div className="flex w-full min-w-0 items-center gap-3 px-3 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 md:flex-1">
             <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
               11
             </span>
@@ -120,7 +120,7 @@ export default function CarCard({ className }) {
           </div>
         )}
         {/* FIXED: w-14 h-14 */}
-        <button className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center bg-primaryColor transition-all duration-150 active:scale-[0.97] cursor-pointer hover:bg-black">
+        <button className="flex h-12 w-full items-center justify-center rounded-xl bg-primaryColor transition-all duration-150 active:scale-[0.97] cursor-pointer hover:bg-black md:h-14 md:w-14 md:flex-shrink-0">
           <BsSearch className="text-white text-lg font-extrabold" />
         </button>
       </div>

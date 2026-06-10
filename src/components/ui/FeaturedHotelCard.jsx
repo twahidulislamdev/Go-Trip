@@ -2,9 +2,9 @@ import React from "react";
 
 const FeaturedHotelCard = ({ hotel }) => {
   return (
-    <div className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-neutral-100 flex flex-col h-full cursor-pointer">
+    <div className="group relative bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-neutral-100 flex flex-col h-full cursor-pointer">
       {/* Image container */}
-      <div className="relative h-56 w-full overflow-hidden">
+      <div className="relative h-48 w-full overflow-hidden sm:h-56">
         <img
           src={hotel.image}
           alt={hotel.name}
@@ -12,13 +12,13 @@ const FeaturedHotelCard = ({ hotel }) => {
         />
         {/* Badge */}
         {hotel.badge && (
-          <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm">
+          <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm sm:top-4 sm:left-4">
             <span className="text-xs font-bold text-neutral-900">{hotel.badge}</span>
           </div>
         )}
         
         {/* Favorite button */}
-        <button className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-white/90 backdrop-blur-sm rounded-full shadow-sm hover:bg-white text-neutral-400 hover:text-red-500 transition-colors">
+        <button className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-white/90 backdrop-blur-sm rounded-full shadow-sm hover:bg-white text-neutral-400 hover:text-red-500 transition-colors sm:top-4 sm:right-4">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
           </svg>
@@ -26,7 +26,7 @@ const FeaturedHotelCard = ({ hotel }) => {
       </div>
 
       {/* Content */}
-      <div className="p-5 flex flex-col flex-grow">
+      <div className="p-4 flex flex-col flex-grow sm:p-5">
         {/* Rating */}
         <div className="flex items-center gap-1.5 mb-2">
           <svg className="w-4 h-4 text-amber-500 fill-amber-500" viewBox="0 0 20 20">
@@ -37,7 +37,7 @@ const FeaturedHotelCard = ({ hotel }) => {
         </div>
 
         {/* Title */}
-        <h3 className="text-lg font-bold text-neutral-900 mb-1 line-clamp-1">{hotel.name}</h3>
+        <h3 className="text-base font-bold text-neutral-900 mb-1 line-clamp-1 sm:text-lg">{hotel.name}</h3>
 
         {/* Location */}
         <div className="flex items-center gap-1.5 text-neutral-500 mb-4">
@@ -51,12 +51,12 @@ const FeaturedHotelCard = ({ hotel }) => {
         </div>
 
         {/* Price & Action */}
-        <div className="mt-auto pt-4 border-t border-neutral-100 flex items-center justify-between">
+        <div className="mt-auto pt-4 border-t border-neutral-100 flex items-center justify-between gap-3">
           <div>
-            <span className="text-xl font-black text-neutral-900">${hotel.price}</span>
+            <span className="text-lg font-black text-neutral-900 sm:text-xl">${hotel.price}</span>
             <span className="text-sm text-neutral-500"> / night</span>
           </div>
-          <button className="px-4 py-2 bg-primaryColor text-white text-sm font-bold rounded-lg hover:bg-primaryColor/90 transition-colors">
+          <button className="shrink-0 px-3 py-2 bg-primaryColor text-white text-xs font-bold rounded-lg hover:bg-primaryColor/90 transition-colors sm:px-4 sm:text-sm">
             Book Now
           </button>
         </div>

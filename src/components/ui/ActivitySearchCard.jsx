@@ -11,7 +11,7 @@ export default function ActivitySearchCard({ className = "" }) {
     <div className={`px-5 py-4 ${className}`}>
       <div className="flex items-center gap-2 flex-wrap lg:flex-nowrap">
         {/* Location */}
-        <div className="flex-[1] min-w-[130px] flex items-center gap-3 px-4 py-3.5 rounded-xl border border-neutral-200 bg-white hover:border-neutral-400 cursor-pointer transition-all duration-150">
+        <div className="flex-[1] min-w-[100px] flex items-center gap-3 px-4 py-3.5 rounded-xl border border-neutral-200 bg-white hover:border-neutral-400 cursor-pointer transition-all duration-150">
           <svg
             width="18"
             height="18"
@@ -37,7 +37,7 @@ export default function ActivitySearchCard({ className = "" }) {
         </div>
 
         {/* Start Date */}
-        <div className="flex items-center gap-3 px-5 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 min-w-[250px]">
+        <div className="flex items-center gap-3 px-5 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 min-w-[280px]">
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
             {startDate}
           </span>
@@ -50,7 +50,7 @@ export default function ActivitySearchCard({ className = "" }) {
         </div>
 
         {/* End Date */}
-        <div className="flex items-center gap-3 px-4 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 min-w-[200px]">
+        <div className="flex items-center gap-3 px-4 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 min-w-[280px]">
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
             {endDate}
           </span>
@@ -63,7 +63,7 @@ export default function ActivitySearchCard({ className = "" }) {
         </div>
 
         {/* People */}
-        <div className="flex items-center gap-3 px-4 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 min-w-[200px]">
+        <div className="flex items-center gap-3 px-4 py-3.5 rounded-xl border border-neutral-300 bg-white hover:border-neutral-500 cursor-pointer transition-all duration-150 min-w-[280px]">
           <span className="text-[28px] font-black text-neutral-900 leading-none border-r-2 border-neutral-300 pr-3">
             {people}
           </span>

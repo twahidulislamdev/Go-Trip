@@ -16,7 +16,7 @@ const CarRentPage = () => {
             <h3 className="text-3xl text-center font-bold text-primaryColor">
               Find Your Next Adventure
             </h3>
-       
+
             <CarSearchCard className="w-full m-auto mt-3 !px-5 !py-3" />
           </div>
 
